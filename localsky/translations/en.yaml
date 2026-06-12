@@ -1,0 +1,12 @@
+configuration:
+  home_assistant:
+    name: Home Assistant connection
+    description: >-
+      Connect LocalSky to Home Assistant through the Supervisor (no token
+      setup needed). Enables device import and entity blending. Turn off for
+      a fully standalone install.
+  log_level:
+    name: Log level
+    description: >-
+      Server log verbosity. Debug and trace raise only LocalSky's own log
+      namespaces, so transport-layer chatter stays quiet.

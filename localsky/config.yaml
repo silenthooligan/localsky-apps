@@ -1,0 +1,31 @@
+# LocalSky app manifest.
+# version tracks the upstream image tag pinned in Dockerfile; bump both together.
+name: LocalSky
+version: "0.3.0-beta.1"
+slug: localsky
+description: Local-first weather hub and smart irrigation engine (Tempest, Ecowitt, OpenSprinkler)
+url: https://github.com/silenthooligan/localsky
+arch:
+  - aarch64
+  - amd64
+# Start before Home Assistant Core so the LocalSky integration finds a
+# running server when it loads.
+startup: services
+boot: auto
+# Host networking is required: the Tempest station broadcasts on UDP 50222,
+# Ecowitt gateways live on the LAN, and LocalSky announces itself over mDNS
+# for integration discovery. The web UI binds port 8090.
+host_network: true
+# Supervisor proxy access: lets LocalSky talk to the Home Assistant API
+# (device import, entity blending) without a long-lived token.
+homeassistant_api: true
+# Stop during backups so the SQLite history database is captured consistently.
+backup: cold
+webui: http://[HOST]:[PORT:8090]/
+watchdog: http://[HOST]:[PORT:8090]/api/v1/info
+options:
+  home_assistant: true
+  log_level: info
+schema:
+  home_assistant: bool
+  log_level: list(error|warn|info|debug|trace)
