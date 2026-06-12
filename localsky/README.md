@@ -4,6 +4,10 @@ Packages the released [LocalSky](https://github.com/silenthooligan/localsky)
 container image as a Home Assistant app: local-first weather hub and smart
 irrigation engine for Tempest, Ecowitt, and OpenSprinkler hardware.
 
+For **Home Assistant OS / Supervised** installations only (the ones with an
+app store). Container and Core users run the same server
+[with Docker](https://localsky.io/docs/getting-started).
+
 See [DOCS.md](DOCS.md) for installation and usage. Installs pull the
 prebuilt `ghcr.io/silenthooligan/localsky-haos` image, built from the
 [Dockerfile](Dockerfile) by the publish-image workflow. On each LocalSky

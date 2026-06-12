@@ -6,7 +6,9 @@ sensors, and OpenSprinkler controllers, and makes irrigation decisions from
 your own weather data with no cloud dependency.
 
 This app runs the LocalSky server on your Home Assistant machine. It is the
-same released container image that runs standalone via Docker.
+same released container image that runs standalone via Docker. Apps are a
+Home Assistant OS / Supervised feature; on a Container or Core install, run
+the server with Docker instead (https://localsky.io/docs/getting-started).
 
 ## How it fits with Home Assistant
 
