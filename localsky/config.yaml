@@ -23,6 +23,14 @@ host_network: true
 # Supervisor proxy access: lets LocalSky talk to the Home Assistant API
 # (device import, entity blending) without a long-lived token.
 homeassistant_api: true
+# Embed the UI in the Home Assistant sidebar. The server reads the
+# X-Ingress-Path header per request, so ingress and direct port 8090
+# access work simultaneously. Requires LocalSky > 0.3.0-beta.1.
+ingress: true
+ingress_port: 8090
+ingress_stream: true
+panel_icon: mdi:sprinkler-variant
+panel_title: LocalSky
 # Stop during backups so the SQLite history database is captured consistently.
 backup: cold
 webui: http://[HOST]:[PORT:8090]/
