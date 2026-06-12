@@ -1,7 +1,11 @@
 # LocalSky app manifest.
-# version tracks the upstream image tag pinned in Dockerfile; bump both together.
+# version must match the published app image tag (ghcr.io/silenthooligan/
+# localsky-haos), which wraps the same-version upstream LocalSky release.
+# New release flow: run the publish-image workflow with the new version,
+# then bump version here and in Dockerfile's BASE_VERSION default.
 name: LocalSky
 version: "0.3.0-beta.1"
+image: ghcr.io/silenthooligan/localsky-haos
 slug: localsky
 description: Local-first weather hub and smart irrigation engine (Tempest, Ecowitt, OpenSprinkler)
 url: https://github.com/silenthooligan/localsky
