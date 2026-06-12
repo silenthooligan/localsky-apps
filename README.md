@@ -24,7 +24,9 @@ the local-first weather hub and smart irrigation engine.
 | [LocalSky via Docker](https://localsky.io/docs/getting-started) | The same server, run anywhere Docker runs | Any machine, HA optional |
 
 You always need exactly one server (this app **or** Docker, never both)
-plus, optionally, the integration for entities.
+plus, optionally, the integration for entities. Docker is the preferred
+and most widely tested way to run the server; this app packages the exact
+same image as a convenience for Home Assistant OS.
 
 [![Add repository to my Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fsilenthooligan%2Flocalsky-apps)
 
