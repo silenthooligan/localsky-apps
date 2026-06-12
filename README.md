@@ -18,13 +18,23 @@ https://github.com/silenthooligan/localsky-apps
 
 Runs the LocalSky server on your Home Assistant machine: native Tempest,
 Ecowitt, and OpenSprinkler support, a first-run setup wizard, and a full web
-UI on port 8090. Pair it with the LocalSky integration (available through
-HACS) to get weather, soil, and irrigation entities in Home Assistant; the
-integration discovers the app automatically.
+UI on port 8090.
 
 Supported architectures: `amd64`, `aarch64`.
+
+## Pair it with the LocalSky integration
+
+The app is the server. The
+[LocalSky integration](https://github.com/silenthooligan/localsky-hacs)
+(via HACS) is what turns it into Home Assistant entities: weather, soil,
+zone valves, verdicts, and services for automations. It discovers the
+running app automatically over mDNS, so the pairing is install-and-done:
+
+[![Open your Home Assistant instance and add this repository to HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=silenthooligan&repository=localsky-hacs&category=integration)
 
 ## Links
 
 - Main project: https://github.com/silenthooligan/localsky
+- Documentation: https://localsky.io/docs/home-assistant-app
+- LocalSky integration (HACS): https://github.com/silenthooligan/localsky-hacs
 - Live demo: https://demo.localsky.io

@@ -14,12 +14,14 @@ LocalSky on Home Assistant is a two-piece setup:
 
 1. **This app** runs the server: data collection, the irrigation engine, and
    the web UI.
-2. **The LocalSky integration** (available through HACS) turns the running
-   server into Home Assistant entities: weather, soil, irrigation status, and
-   more.
+2. **The [LocalSky integration](https://github.com/silenthooligan/localsky-hacs)**
+   (available through HACS) turns the running server into Home Assistant
+   entities: weather, soil, irrigation status, and more.
 
 The app announces itself over mDNS, so once it is running the integration
-discovers it automatically.
+discovers it automatically. Add the integration to HACS with one click:
+
+[![Open your Home Assistant instance and add this repository to HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=silenthooligan&repository=localsky-hacs&category=integration)
 
 ## Installation
 
