@@ -1,0 +1,71 @@
+# Ships a new app version in one shot: builds the prebuilt multi-arch app
+# image (wrapper over the released LocalSky image), pushes it to GHCR, then
+# bumps the manifest (config.yaml version, Dockerfile base default) and
+# prepends a CHANGELOG entry so installed instances see the update.
+#
+# Run it with the LocalSky release tag after each upstream release.
+name: release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "LocalSky release tag to ship (becomes the app version and image tag)"
+        required: true
+        type: string
+      changelog:
+        description: "Optional product-news line for the app changelog"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bump manifest to ${{ inputs.version }}
+        run: |
+          set -eu
+          V="${{ inputs.version }}"
+          sed -i "s|^version: \".*\"|version: \"$V\"|" localsky/config.yaml
+          sed -i "s|^ARG BASE_VERSION=.*|ARG BASE_VERSION=$V|" localsky/Dockerfile
+          NOTE="${{ inputs.changelog }}"
+          [ -n "$NOTE" ] || NOTE="Packages LocalSky v$V."
+          { head -1 localsky/CHANGELOG.md; printf '\n## %s\n\n%s\n' "$V" "$NOTE"; tail -n +2 localsky/CHANGELOG.md; } > /tmp/cl.md
+          mv /tmp/cl.md localsky/CHANGELOG.md
+          git diff --stat
+
+      - uses: docker/setup-qemu-action@v3
+
+      - uses: docker/setup-buildx-action@v3
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: docker/build-push-action@v6
+        with:
+          context: ./localsky
+          platforms: linux/amd64,linux/arm64
+          push: true
+          build-args: |
+            BASE_VERSION=${{ inputs.version }}
+          tags: |
+            ghcr.io/silenthooligan/localsky-haos:${{ inputs.version }}
+            ghcr.io/silenthooligan/localsky-haos:latest
+
+      - name: Commit the bump
+        run: |
+          set -eu
+          git config user.name silenthooligan
+          git config user.email erik@skean.net
+          git add localsky/config.yaml localsky/Dockerfile localsky/CHANGELOG.md
+          git commit -m "feat: LocalSky ${{ inputs.version }}"
+          git push origin HEAD:main
