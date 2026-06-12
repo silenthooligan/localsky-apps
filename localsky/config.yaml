@@ -4,7 +4,7 @@
 # New release flow: run the publish-image workflow with the new version,
 # then bump version here and in Dockerfile's BASE_VERSION default.
 name: LocalSky
-version: "0.3.0-beta.1"
+version: "0.3.0-beta.2"
 image: ghcr.io/silenthooligan/localsky-haos
 slug: localsky
 description: Local-first weather hub and smart irrigation engine (Tempest, Ecowitt, OpenSprinkler)
