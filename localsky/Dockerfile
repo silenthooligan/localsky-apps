@@ -7,7 +7,7 @@
 # root-owned. This layer starts as root, fixes /data ownership, wires
 # Supervisor-provided config (HA proxy token, options.json) into LocalSky's
 # environment, then drops back to uid 10001 before exec'ing the server.
-ARG BASE_VERSION=0.4.0-beta.1
+ARG BASE_VERSION=0.4.0-beta.2
 FROM ghcr.io/silenthooligan/localsky:${BASE_VERSION}
 
 USER 0
