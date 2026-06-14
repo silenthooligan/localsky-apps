@@ -20,7 +20,7 @@ the local-first weather hub and smart irrigation engine.
 | Piece | What it is | Works on |
 |---|---|---|
 | **This app** | Runs the LocalSky *server* on your Home Assistant machine | Home Assistant OS / Supervised only |
-| [LocalSky integration](https://github.com/silenthooligan/localsky-hacs) (HACS) | Turns a running LocalSky server into HA entities | Every HA installation type |
+| [LocalSky integration](https://github.com/silenthooligan/localsky-ha) (HACS) | Turns a running LocalSky server into HA entities | Every HA installation type |
 | [LocalSky via Docker](https://localsky.io/docs/getting-started) | The same server, run anywhere Docker runs | Any machine, HA optional |
 
 You always need exactly one server (this app **or** Docker, never both)
@@ -50,16 +50,16 @@ Supported architectures: `amd64`, `aarch64`.
 ## Pair it with the LocalSky integration
 
 The app is the server. The
-[LocalSky integration](https://github.com/silenthooligan/localsky-hacs)
+[LocalSky integration](https://github.com/silenthooligan/localsky-ha)
 (via HACS) is what turns it into Home Assistant entities: weather, soil,
 zone valves, verdicts, and services for automations. It discovers the
 running app automatically over mDNS, so the pairing is install-and-done:
 
-[![Open your Home Assistant instance and add this repository to HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=silenthooligan&repository=localsky-hacs&category=integration)
+[![Open your Home Assistant instance and add this repository to HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=silenthooligan&repository=localsky-ha&category=integration)
 
 ## Links
 
 - Main project: https://github.com/silenthooligan/localsky
 - Documentation: https://localsky.io/docs/home-assistant-app
-- LocalSky integration (HACS): https://github.com/silenthooligan/localsky-hacs
+- LocalSky integration (HACS): https://github.com/silenthooligan/localsky-ha
 - Live demo: https://demo.localsky.io
