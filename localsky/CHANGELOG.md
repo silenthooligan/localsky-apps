@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0-beta.3
+
+Packages LocalSky v0.4.0-beta.3: security fixes and hardening.
+
 ## 0.4.0-beta.2
 
 Packages LocalSky v0.4.0-beta.2: flow metering, a first-class Sensors view, point-and-click data-source setup, built-in docs and in-app help, plus setup-wizard fixes (license acceptance and notification choices now persist).
