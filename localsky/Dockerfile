@@ -20,4 +20,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends jq openssl \
 COPY run.sh /run.sh
 RUN chmod a+x /run.sh
 
+# The base image (>= 0.4.0-beta.3) sets an ENTRYPOINT that fixes /data perms
+# and drops to uid 10001 before its CMD. This addon has its OWN root wrapper
+# (run.sh: chowns /data, wires the Supervisor token, generates VAPID, then
+# drops itself), so it must run as root. Clear the inherited entrypoint so
+# run.sh is the command and runs as USER 0; without this the base entrypoint
+# drops to 10001 first and run.sh's setpriv/chown fail (the addon crash-loops).
+ENTRYPOINT []
 CMD ["/run.sh"]
