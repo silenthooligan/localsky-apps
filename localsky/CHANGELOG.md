@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0-beta.1
+
+First-class DIY/ESP32 controllers (HTTP or MQTT), sticky overrides, wind-gust forecast, PWA reliability fix.
+
 ## 0.4.0-beta.3
 
 Fix the addon so it starts on the non-root base image (the initial 0.4.0-beta.3 addon crash-looped at startup).
