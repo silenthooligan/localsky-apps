@@ -4,6 +4,10 @@
 
 Per-reading backup chains, unified source list, display units, cloud-first setup, smarter rain-skip safety.
 
+## 0.7.0
+
+Per-reading backup chains, unified source list, display units, cloud-first setup, smarter rain-skip safety.
+
 ## 0.5.0-beta.1
 
 First-class DIY/ESP32 controllers (HTTP or MQTT), sticky overrides, wind-gust forecast, PWA reliability fix.
