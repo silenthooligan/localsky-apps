@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.2
+
+Forecast failover chain, condition-aware dashboard, and extended weather data.
+
 ## 0.7.0
 
 Per-reading backup chains, unified source list, display units, cloud-first setup, smarter rain-skip safety.
