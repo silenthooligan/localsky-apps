@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.5
+
+LocalSky 0.7.5: in-app restart for restart-required changes, Ecowitt gateway login in the source editor (enables gateway-side probe removal), source-ranking self-repair, and removed probes no longer linger as offline.
+
 ## 0.7.4
 
 LocalSky 0.7.4: in-place soil-probe management, HA ingress write fixes (wizard and settings saves from the sidebar now work), fresh-install Settings fix, and a major sensors/devices query performance win.
