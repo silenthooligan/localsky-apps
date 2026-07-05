@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.3
+
+LocalSky 0.7.3: one-click soil-probe removal (including Ecowitt gateway unregistration), and a fix for in-app navigation 404s when LocalSky is opened from the Home Assistant sidebar (ingress). No breaking changes.
+
 ## 0.7.2
 
 Forecast failover chain, condition-aware dashboard, and extended weather data.
