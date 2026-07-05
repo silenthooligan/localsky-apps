@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.4
+
+LocalSky 0.7.4: in-place soil-probe management, HA ingress write fixes (wizard and settings saves from the sidebar now work), fresh-install Settings fix, and a major sensors/devices query performance win.
+
 ## 0.7.3
 
 LocalSky 0.7.3: one-click soil-probe removal (including Ecowitt gateway unregistration), and a fix for in-app navigation 404s when LocalSky is opened from the Home Assistant sidebar (ingress). No breaking changes.
