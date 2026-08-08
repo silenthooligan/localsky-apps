@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.9
+
+Interleaving on by default with a wizard water-supply question, cycle-and-soak settings apply without a restart, sign-in via an authenticating reverse proxy, new Engine settings page. Full notes: https://github.com/silenthooligan/localsky/releases/tag/v0.7.9
+
 ## 0.7.8
 
 ET0 unit fix (displayed and projected ET read 25x low on the default forecast source), opt-in cycle interleaving across zones, and timezone-correct day boundaries for containerized deployments. Full notes: https://github.com/silenthooligan/localsky/releases/tag/v0.7.8
