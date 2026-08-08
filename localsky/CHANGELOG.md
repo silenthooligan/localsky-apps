@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.8
+
+ET0 unit fix (displayed and projected ET read 25x low on the default forecast source), opt-in cycle interleaving across zones, and timezone-correct day boundaries for containerized deployments. Full notes: https://github.com/silenthooligan/localsky/releases/tag/v0.7.8
+
 ## 0.7.5
 
 LocalSky 0.7.5: in-app restart for restart-required changes, Ecowitt gateway login in the source editor (enables gateway-side probe removal), source-ranking self-repair, and removed probes no longer linger as offline.
