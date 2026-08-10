@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.10
+
+Lightning fixes: the one-hour strike counter now decays after a storm (a stuck counter left 'strikes above 0' automations silent), the average strike distance reports unknown instead of 0 when no strikes were detected, and a new last-strike distance sensor persists between strikes. Full notes: https://github.com/silenthooligan/localsky/releases/tag/v0.7.10
+
 ## 0.7.9
 
 Interleaving on by default with a wizard water-supply question, cycle-and-soak settings apply without a restart, sign-in via an authenticating reverse proxy, new Engine settings page. Full notes: https://github.com/silenthooligan/localsky/releases/tag/v0.7.9
