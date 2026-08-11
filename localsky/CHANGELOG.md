@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.11
+
+Packages LocalSky v0.7.11. Hourly forecasts now reach Home Assistant; no add-on changes.
+
 ## 0.7.10
 
 Lightning fixes: the one-hour strike counter now decays after a storm (a stuck counter left 'strikes above 0' automations silent), the average strike distance reports unknown instead of 0 when no strikes were detected, and a new last-strike distance sensor persists between strikes. Full notes: https://github.com/silenthooligan/localsky/releases/tag/v0.7.10
