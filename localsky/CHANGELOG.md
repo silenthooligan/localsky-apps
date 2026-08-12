@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.12
+
+A refused settings save now names the failing validation rules instead of a bare config_invalid code, and precipitation probability becomes a sensor. Full notes: https://github.com/silenthooligan/localsky/releases/tag/v0.7.12
+
 ## 0.7.11
 
 Packages LocalSky v0.7.11. Hourly forecasts now reach Home Assistant; no add-on changes.
