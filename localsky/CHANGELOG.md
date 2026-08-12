@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.13
+
+Setup wizard cloud toggles now save to the setup draft and apply when setup finishes; failed settings loads show the server's reason. Full notes: https://github.com/silenthooligan/localsky/releases/tag/v0.7.13
+
 ## 0.7.12
 
 A refused settings save now names the failing validation rules instead of a bare config_invalid code, and precipitation probability becomes a sensor. Full notes: https://github.com/silenthooligan/localsky/releases/tag/v0.7.12
