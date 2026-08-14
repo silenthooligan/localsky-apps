@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.14
+
+Values LocalSky never measured now read as unknown instead of a fabricated number (water level, ET0 during outages, precipitation probability, and more), unlocated installs no longer show another city's weather, and Home Assistant only gets sensors your install can actually feed.
+
 ## 0.7.13
 
 Setup wizard cloud toggles now save to the setup draft and apply when setup finishes; failed settings loads show the server's reason. Full notes: https://github.com/silenthooligan/localsky/releases/tag/v0.7.13
