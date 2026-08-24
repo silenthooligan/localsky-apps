@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.16
+
+Set each zone's own maximum run time, with a confirmation step and a notification when raising it past 60 minutes. Tuning suggestions now offer to raise the run limit before splitting sessions, pause while a watering restriction is active, and the tuning surfaces got a clearer look with suggestion badges on zone cards.
+
 ## 0.7.15
 
 LocalSky now watches your zones for a week or two and hands you plain-language tuning suggestions with a one-click apply: session splits when a duration cap is shorting a zone, soil texture when a probe disagrees with the model, your real sprinkler rate measured from probe readings, and an honest scorecard of its rain-skip calls.
