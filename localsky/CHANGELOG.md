@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.15
+
+LocalSky now watches your zones for a week or two and hands you plain-language tuning suggestions with a one-click apply: session splits when a duration cap is shorting a zone, soil texture when a probe disagrees with the model, your real sprinkler rate measured from probe readings, and an honest scorecard of its rain-skip calls.
+
 ## 0.7.14
 
 Values LocalSky never measured now read as unknown instead of a fabricated number (water level, ET0 during outages, precipitation probability, and more), unlocated installs no longer show another city's weather, and Home Assistant only gets sensors your install can actually feed.
