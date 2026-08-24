@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.17
+
+Watering sessions are now sized by a real weekly water balance: rain that already fell, watering already done, and a forecast credit corrected against your yard's own history all count toward the weekly target, so sessions shrink or skip when the week is already covered. Installs without a rain gauge fall back to weather-source data with the source named. Tuning suggestions can be snoozed for 30 days or dismissed permanently, which also silences the weekly notification.
+
 ## 0.7.16
 
 Set each zone's own maximum run time, with a confirmation step and a notification when raising it past 60 minutes. Tuning suggestions now offer to raise the run limit before splitting sessions, pause while a watering restriction is active, and the tuning surfaces got a clearer look with suggestion badges on zone cards.
