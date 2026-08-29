@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.18
+
+Scan zones in the controller editor now fills the zone map, zones imported through the setup wizard work on Rachio, Hydrawise, B-hyve, and Rain Bird, and Rachio gets live running state with API-budget-friendly polling. Stopping a Rachio zone stops all watering on the device (its API has no per-zone stop); the app says so when it happens.
+
 ## 0.7.17
 
 Watering sessions are now sized by a real weekly water balance: rain that already fell, watering already done, and a forecast credit corrected against your yard's own history all count toward the weekly target, so sessions shrink or skip when the week is already covered. Installs without a rain gauge fall back to weather-source data with the source named. Tuning suggestions can be snoozed for 30 days or dismissed permanently, which also silences the weekly notification.
