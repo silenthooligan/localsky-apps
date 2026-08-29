@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.20
+
+Zones on a cloud controller start again: a station number typed into a zone could overwrite the zone id the controller scan found, so the app asked the vendor to run a zone that does not exist. A start that fails now names the reason, and when a zone is not matched to a controller zone it shows the controller's zone list and the two ways to fix it.
+
 ## 0.7.19
 
 Settings and navigation clarity: the restart notice stays on screen while you work, scan results open and scroll into view, unsaved changes are flagged on the save button, and the Zones navigation entry shows how many zones have tuning suggestions.
