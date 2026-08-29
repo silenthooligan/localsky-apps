@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.19
+
+Settings and navigation clarity: the restart notice stays on screen while you work, scan results open and scroll into view, unsaved changes are flagged on the save button, and the Zones navigation entry shows how many zones have tuning suggestions.
+
 ## 0.7.18
 
 Scan zones in the controller editor now fills the zone map, zones imported through the setup wizard work on Rachio, Hydrawise, B-hyve, and Rain Bird, and Rachio gets live running state with API-budget-friendly polling. Stopping a Rachio zone stops all watering on the device (its API has no per-zone stop); the app says so when it happens.
