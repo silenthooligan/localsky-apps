@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.21
+
+Zones now bind to a controller zone you pick from a list, so the names in LocalSky and in your controller app no longer have to match. Existing bindings are carried over automatically. A scan can bind several zones at once, the bound zone is shown on the zone, and a zone nothing can water now says so instead of failing silently.
+
 ## 0.7.20
 
 Zones on a cloud controller start again: a station number typed into a zone could overwrite the zone id the controller scan found, so the app asked the vendor to run a zone that does not exist. A start that fails now names the reason, and when a zone is not matched to a controller zone it shows the controller's zone list and the two ways to fix it.
