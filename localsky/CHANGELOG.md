@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.22
+
+Zones now say why they are not watering, the soil deficit no longer shows a number nothing measured, and Home Assistant helpers are migrated into LocalSky's own settings.
+
 ## 0.7.21
 
 Zones now bind to a controller zone you pick from a list, so the names in LocalSky and in your controller app no longer have to match. Existing bindings are carried over automatically. A scan can bind several zones at once, the bound zone is shown on the zone, and a zone nothing can water now says so instead of failing silently.
