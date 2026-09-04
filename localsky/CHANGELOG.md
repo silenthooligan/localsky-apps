@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.0
+
+Tracks LocalSky 0.8.0. Every zone shows its real soil deficit, and a new soil scheduling model waters each zone by its own soil instead of a weekly quota. A sandy yard no longer skips a whole week of watering after one storm.
+
 ## 0.7.22
 
 Zones now say why they are not watering, the soil deficit no longer shows a number nothing measured, and Home Assistant helpers are migrated into LocalSky's own settings.
