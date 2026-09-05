@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.1
+
+Tracks LocalSky 0.8.1. The zone editor opens where you clicked it, adding a zone opens a dialog instead of a form below the fold, and the watering-targets notice no longer implies something is unfinished.
+
 ## 0.8.0
 
 Tracks LocalSky 0.8.0. Every zone shows its real soil deficit, and a new soil scheduling model waters each zone by its own soil instead of a weekly quota. A sandy yard no longer skips a whole week of watering after one storm.
