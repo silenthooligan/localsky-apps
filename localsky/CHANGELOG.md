@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0
+
+Packages LocalSky 0.9.0: shared weather decisions, HA WeatherFlow input, rain-aware planning, daily history and restart recovery.
+
 ## 0.8.1
 
 Tracks LocalSky 0.8.1. The zone editor opens where you clicked it, adding a zone opens a dialog instead of a form below the fold, and the watering-targets notice no longer implies something is unfinished.
