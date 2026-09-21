@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.1
+
+Packages LocalSky 0.9.1 with forecast models, window queries, archive and irrigation fixes.
+
 ## 0.9.0
 
 Packages LocalSky 0.9.0: shared weather decisions, HA WeatherFlow input, rain-aware planning, daily history and restart recovery.
