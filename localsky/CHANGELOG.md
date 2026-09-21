@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.2
+
+Packages LocalSky 0.9.2 with HA bulk-state recovery and structured operation diagnostics.
+
 ## 0.9.1
 
 Packages LocalSky 0.9.1 with forecast models, window queries, archive and irrigation fixes.
