@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.3
+
+Packages LocalSky 0.9.3: current demo history, read-only setup messaging, theme-aware radar, and corrected dry-run controller state.
+
 ## 0.9.2
 
 Packages LocalSky 0.9.2 with HA bulk-state recovery and structured operation diagnostics.
