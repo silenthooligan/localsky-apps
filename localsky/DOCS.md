@@ -1,84 +1,57 @@
-# LocalSky
+# Run LocalSky on Home Assistant OS
 
-LocalSky is a local-first weather hub and smart irrigation engine. It speaks
-natively to WeatherFlow Tempest stations (LAN UDP), Ecowitt gateways and soil
-sensors, and OpenSprinkler controllers, and makes irrigation decisions from
-your own weather data with no cloud dependency.
+This app runs the LocalSky server: weather collection, irrigation planning, history, and the web interface. The optional [HACS integration](https://github.com/silenthooligan/localsky-ha) adds the server's entities and actions to Home Assistant.
 
-This app runs the LocalSky server on your Home Assistant machine. It is the
-same released container image that runs standalone via Docker. Apps are a
-Home Assistant OS / Supervised feature; on a Container or Core install, run
-the server with Docker instead (https://localsky.io/docs/getting-started).
+## First setup
 
-## How it fits with Home Assistant
+1. Start the app and select **Open web UI**.
+2. Set your location and timezone.
+3. Add weather sources. If HA already receives your station, choose HA passthrough.
+4. Add a supported controller if you want irrigation. Check its connection and zone bindings.
+5. Set each zone's plants, soil, application rate, and run limit.
+6. Finish setup and review the Irrigation page before enabling unattended watering.
 
-LocalSky on Home Assistant is a two-piece setup:
+All of these settings remain editable in LocalSky. [Full setup guide](https://localsky.io/docs/getting-started).
 
-1. **This app** runs the server: data collection, the irrigation engine, and
-   the web UI.
-2. **The [LocalSky integration](https://github.com/silenthooligan/localsky-ha)**
-   (available through HACS) turns the running server into Home Assistant
-   entities: weather, soil, irrigation status, and more.
+## App options
 
-The app announces itself over mDNS, so once it is running the integration
-discovers it automatically. Add the integration to HACS with one click:
+| Option | Default | What it changes |
+|---|---|---|
+| `home_assistant` | `true` | Enables the Supervisor API connection for HA device import and passthrough. No separate HA URL or access token is needed for this connection. |
+| `log_level` | `info` | Sets LocalSky log detail. Use `debug` when collecting evidence for a problem. |
 
-[![Open your Home Assistant instance and add this repository to HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=silenthooligan&repository=localsky-ha&category=integration)
+These options configure the app wrapper. Configure weather sources, irrigation, accounts, and notifications inside LocalSky.
 
-## Installation
+## Network access
 
-1. Add this repository to your app store and install **LocalSky**.
-2. Start the app, then click **OPEN WEB UI** (the UI listens on port 8090).
-3. The first-run wizard walks you through station setup (Tempest or Ecowitt),
-   location, zones, and your irrigation controller.
-4. Optional: install the LocalSky integration via HACS to get entities in
-   Home Assistant. It will discover this app on its own.
+The app uses the host network for local device access, Tempest UDP broadcasts, and mDNS discovery. Its direct web address is **http://YOUR_HA_HOST:8090**. The Home Assistant sidebar uses ingress.
 
-## Options
+Port 8090 must be free. Devices on other subnets must be reachable through your network rules; multicast and UDP broadcasts do not automatically cross VLANs.
 
-### `home_assistant` (default: on)
+If HA's WeatherFlow integration already listens on UDP 50222, disable or remove LocalSky's Tempest UDP source and use HA passthrough. Choose **Rain last minute (accumulate today)** for WeatherFlow's preceding-minute precipitation reading. Keep a forecast provider enabled.
 
-Connects LocalSky to Home Assistant through the Supervisor. No access token
-or URL setup is needed. This enables Home Assistant device import and entity
-blending inside LocalSky. Turn it off for a fully standalone install.
+## Backups and updates
 
-### `log_level` (default: info)
+The persistent `/data` directory contains LocalSky's configuration, identity, and history. Home Assistant includes it in app backups and stops the app briefly for a consistent backup. LocalSky also offers a downloadable backup under Settings.
 
-Server log verbosity. `debug` and `trace` raise only LocalSky's own log
-namespaces, so transport-layer chatter stays quiet.
+Before an update, take a backup and read the release notes. Update the app and companion integration to matching releases. Afterward, check the version, source health, and zone status in LocalSky.
 
-## Networking
+[Backup and restore guide](https://localsky.io/docs/backup-restore).
 
-The app runs on the host network. That is required so it can:
+## Notifications
 
-- hear the Tempest station's LAN broadcast (UDP 50222),
-- reach your Ecowitt gateway and OpenSprinkler controller on the LAN,
-- announce itself over mDNS for integration discovery.
+The app creates Web Push keys on first boot. Browser push also requires an HTTPS origin, browser support, and subscription permission. Direct HTTP access on a LAN does not meet the HTTPS requirement. Configure delivery in LocalSky's Notifications settings.
 
-The web UI binds port 8090 on the host. If another service on your machine
-already uses 8090, the app log will show a bind failure on startup.
+## When something goes wrong
 
-## Data and backups
+| Symptom | First check |
+|---|---|
+| App does not start | Open the app log and check for a port conflict or data-directory error. |
+| No station readings | Check LocalSky's Devices status and whether broadcasts reach the host. |
+| HA entities are missing | Install and pair the HACS integration; the app alone does not create them. |
+| HA passthrough reports HTTP 500 | Read the LocalSky technical details and HA log at the same timestamp. In 0.9.2, mapped entity reads can recover a failed bulk request. |
+| Irrigation is held | Open Watering decisions for the zone's reason and missing inputs. |
 
-Everything LocalSky stores lives in `/data`: the configuration file
-(`localsky.toml`) and the irrigation history database (`irrigation.db`).
-That directory is included in Home Assistant backups. The app stops briefly
-while a backup is taken so the history database is captured consistently.
+The watchdog checks `/api/v1/info` and can restart an unresponsive app. That checks server reachability; use LocalSky's health and decision views to assess sources and watering.
 
-## Push notifications
-
-A Web Push (VAPID) keypair is generated automatically on first boot.
-Browsers only allow notifications over HTTPS, so push stays dormant when you
-use the plain `http://` UI. If you front LocalSky with your own TLS reverse
-proxy, push notifications work out of the box.
-
-## Troubleshooting
-
-- The app's **Log** tab shows the server log at the configured level.
-- The watchdog probes `/api/v1/info` and restarts the app if the server
-  stops responding.
-- The setup wizard only appears until a configuration exists. After that,
-  everything is managed from Settings inside the web UI.
-
-For issues and feature requests, use the main repository:
-https://github.com/silenthooligan/localsky
+[LocalSky troubleshooting](https://localsky.io/docs/troubleshooting) · [Packaging issues](https://github.com/silenthooligan/localsky-apps/issues) · [Server issues](https://github.com/silenthooligan/localsky/issues)
