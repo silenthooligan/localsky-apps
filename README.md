@@ -7,6 +7,10 @@ This app installs the LocalSky server on your Home Assistant OS machine. It incl
 
 LocalSky uses your weather, soil, and watering history to plan each zone's next run. You can also use it for weather alone.
 
+The upcoming 1.0.0 release includes the unreleased 0.9.4 work. The same wrapper
+can be tested privately with the Docker build argument `BASE_IMAGE`; normal
+release builds use the matching public LocalSky version.
+
 ## Install
 
 [![Add the LocalSky app repository](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fsilenthooligan%2Flocalsky-apps)
