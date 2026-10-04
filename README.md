@@ -7,9 +7,10 @@ This app installs the LocalSky server on your Home Assistant OS machine. It incl
 
 LocalSky uses your weather, soil, and watering history to plan each zone's next run. You can also use it for weather alone.
 
-The upcoming 1.0.0 release includes the unreleased 0.9.4 work. The same wrapper
-can be tested privately with the Docker build argument `BASE_IMAGE`; normal
-release builds use the matching public LocalSky version.
+LocalSky 1.0.0 is the first stable release, including the unreleased 0.9.4 work.
+It brings Quick Run, an app-wide watering strip with Stop, Field Green and
+Classic Blue theme choices, searchable settings, and clearer setup and history.
+The Feedback button remains available.
 
 ## Install
 
@@ -45,6 +46,6 @@ For Tempest, choose which application receives the local UDP feed. If HA's Weath
 
 The app keeps configuration and history in its persistent data directory. Home Assistant backups include that data; LocalSky also offers its own backup download.
 
-Update through the app store after reviewing the release notes. LocalSky is in beta, so verify zone bindings and run limits before enabling automatic watering.
+Update through the app store after reviewing the release notes. Verify zone bindings and run limits before enabling automatic watering.
 
 [App guide](localsky/DOCS.md) · [LocalSky documentation](https://localsky.io/docs/) · [Report a packaging issue](https://github.com/silenthooligan/localsky-apps/issues)

@@ -1,11 +1,5 @@
 # Changelog
 
-## 1.0.0 (unreleased)
-
-Includes the unreleased 0.9.4 changes: shared themes, an upgrade appearance
-choice, clearer Rule Lab decisions and History, searchable settings, and
-improved setup layouts. API compatibility remains 2.4.0.
-
 ## 0.9.3
 
 Packages LocalSky 0.9.3: current demo history, read-only setup messaging, theme-aware radar, and corrected dry-run controller state.

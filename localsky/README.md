@@ -10,6 +10,6 @@ app store). Container and Core users run the same server
 
 See [DOCS.md](DOCS.md) for installation and usage. Installs pull the
 prebuilt `ghcr.io/silenthooligan/localsky-haos` image, built from the
-[Dockerfile](Dockerfile) by the publish-image workflow. On each LocalSky
+[Dockerfile](Dockerfile) by the release workflow. On each LocalSky
 release the workflow is run with the new version, then `version` in
 [config.yaml](config.yaml) is bumped to match.
