@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0
+
+Stable 1.0.0 with Quick Run, app-wide watering progress and Stop, Field Green and Classic Blue themes, searchable settings, improved setup and HAOS ingress fixes. Includes unreleased 0.9.4 work; API 2.4.0.
+
 ## 0.9.3
 
 Packages LocalSky 0.9.3: current demo history, read-only setup messaging, theme-aware radar, and corrected dry-run controller state.
