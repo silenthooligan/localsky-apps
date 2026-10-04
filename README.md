@@ -12,6 +12,9 @@ It brings Quick Run, an app-wide watering strip with Stop, Field Green and
 Classic Blue theme choices, searchable settings, and clearer setup and history.
 The Feedback button remains available.
 
+The release workflow supports publishing from a prepared release branch and
+advances the app-store manifest only after both image architectures are built.
+
 ## Install
 
 [![Add the LocalSky app repository](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fsilenthooligan%2Flocalsky-apps)
