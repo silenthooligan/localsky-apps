@@ -1,8 +1,8 @@
 # LocalSky app manifest.
 # version must match the published app image tag (ghcr.io/silenthooligan/
 # localsky-haos), which wraps the same-version upstream LocalSky release.
-# New release flow: run the publish-image workflow with the new version,
-# then bump version here and in Dockerfile's BASE_VERSION default.
+# Release flow: run release.yml with the new version. It publishes both
+# image architectures before advancing this manifest on main.
 name: LocalSky
 version: "1.0.0"
 image: ghcr.io/silenthooligan/localsky-haos
