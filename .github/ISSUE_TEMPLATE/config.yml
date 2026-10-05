@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions
+    url: https://github.com/silenthooligan/localsky/discussions/categories/q-a
+    about: Setup and usage questions.
+  - name: LocalSky service bug
+    url: https://github.com/silenthooligan/localsky/issues
+    about: Bugs in the LocalSky dashboard, engine, or API belong in the main repo.
+  - name: Home Assistant integration bug
+    url: https://github.com/silenthooligan/localsky-ha/issues
+    about: Entities, services, and config flow belong in the integration repo.
+  - name: Documentation
+    url: https://localsky.io/docs/home-assistant-app
+    about: Install and configuration on Home Assistant OS.
+  - name: Security disclosure
+    url: https://github.com/silenthooligan/localsky-apps/security/advisories/new
+    about: Use the private security advisory flow for anything sensitive. Don't file a public issue.

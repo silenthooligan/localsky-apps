@@ -1,0 +1,53 @@
+name: Packaging issue
+description: Install, start-up, or options problem with the LocalSky app for Home Assistant OS
+labels: ["bug", "triage", "component: add-on"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bugs in the LocalSky service itself (dashboard, engine, API) belong at
+        https://github.com/silenthooligan/localsky/issues. This repo covers the
+        Home Assistant OS packaging: install, start-up, and app options.
+  - type: input
+    id: app_version
+    attributes:
+      label: LocalSky app version
+      description: Settings -> Apps -> LocalSky.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant version
+      description: Core, Supervisor, and Operating System from Settings -> About.
+      placeholder: "Core 2026.9.3, Supervisor 2026.09.2, OS 18.3"
+    validations:
+      required: true
+  - type: dropdown
+    id: arch
+    attributes:
+      label: Architecture
+      options:
+        - aarch64
+        - amd64
+    validations:
+      required: true
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: App log
+      description: Settings -> Apps -> LocalSky -> Log. Trim secrets.
+      render: shell
