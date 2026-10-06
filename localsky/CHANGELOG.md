@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+LocalSky 1.0.1 with per-device notification settings: choose which alerts each phone or browser receives, set quiet hours, and opt into a daily watering outlook. API 2.4.0.
+
 ## 1.0.0
 
 Stable 1.0.0 with Quick Run, app-wide watering progress and Stop, Field Green and Classic Blue themes, searchable settings, improved setup and HAOS ingress fixes. Includes unreleased 0.9.4 work; API 2.4.0.

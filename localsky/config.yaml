@@ -4,7 +4,7 @@
 # Release flow: run release.yml with the new version. It publishes both
 # image architectures before advancing this manifest on main.
 name: LocalSky
-version: "1.0.0"
+version: "1.0.1"
 image: ghcr.io/silenthooligan/localsky-haos
 slug: localsky
 description: Local-first weather hub and smart irrigation engine (Tempest, Ecowitt, OpenSprinkler)
