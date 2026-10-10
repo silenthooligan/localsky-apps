@@ -12,8 +12,11 @@ It brings Quick Run, an app-wide watering strip with Stop, Field Green and
 Classic Blue theme choices, searchable settings, and clearer setup and history.
 The Feedback button remains available.
 
-The release workflow supports publishing from a prepared release branch and
-advances the app-store manifest only after both image architectures are built.
+The release workflow builds amd64 and arm64 on native runners against the
+published base image's exact digest. Both wrappers must pass isolated startup,
+health, web assets, non-root execution, clean shutdown and security scans before
+version/latest images and the app-store manifest advance. This verifies the
+package itself; it does not replace testing an installation under Supervisor.
 
 ## Install
 

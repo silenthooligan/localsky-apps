@@ -1,5 +1,5 @@
 # Thin wrapper over the released multi-arch LocalSky image, published as a
-# prebuilt app image by .github/workflows/publish-image.yml so installs are
+# prebuilt app image by .github/workflows/release.yml so installs are
 # a pull, not a local build.
 #
 # Why a wrapper instead of the upstream image directly: the upstream image
