@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+LocalSky 1.0.2: global day/night and cloud conditions, timezone and polar sunrise fixes, fresher derived weather readings, and clearer weather evidence. Both native architectures pass startup and security checks before this update is offered.
+
 ## 1.0.1
 
 LocalSky 1.0.1 with per-device notification settings: choose which alerts each phone or browser receives, set quiet hours, and opt into a daily watering outlook. API 2.4.0.
