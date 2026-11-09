@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1
+
+Soil probe labels by topic, Home Assistant MQTT availability check, a Current conditions card without a Tempest, every weather reading in MQTT subscriptions, and a bundled SQLite security update.
+
 ## 1.1.0
 
 Multiple soil probes per zone, aggregation, per-probe freshness and exclusion, retained MQTT handling, and location-search improvements.
