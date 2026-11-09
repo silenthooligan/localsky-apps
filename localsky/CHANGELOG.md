@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+
+Multiple soil probes per zone, aggregation, per-probe freshness and exclusion, retained MQTT handling, and location-search improvements.
+
 ## 1.0.2
 
 LocalSky 1.0.2: global day/night and cloud conditions, timezone and polar sunrise fixes, fresher derived weather readings, and clearer weather evidence. Both native architectures pass startup and security checks before this update is offered.
