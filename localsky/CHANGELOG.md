@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2
+
+Humidity as its own MQTT reading, every mapped reading on the Devices card, switched-off controllers shown with an On/Off switch, zone lists in the source editor, clearer OpenWeather subscription text, and removal of the old Home Assistant node after an Identity change.
+
 ## 1.1.1
 
 Soil probe labels by topic, Home Assistant MQTT availability check, a Current conditions card without a Tempest, every weather reading in MQTT subscriptions, and a bundled SQLite security update.
