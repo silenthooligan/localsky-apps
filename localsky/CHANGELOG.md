@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.3
+
+Remove probe that holds for a soil sensor its origin still offers, a Removed probes list with Show again under Settings, Sensors, the restart notice kept in view after Go to restart in setup, and the libz-sys, quinn-udp and rustix security updates.
+
 ## 1.1.2
 
 Humidity as its own MQTT reading, every mapped reading on the Devices card, switched-off controllers shown with an On/Off switch, zone lists in the source editor, clearer OpenWeather subscription text, and removal of the old Home Assistant node after an Identity change.
